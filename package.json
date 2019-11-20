@@ -1,0 +1,24 @@
+{
+  "name": "week2",
+  "version": "1.0.0",
+  "description": "bootstrap php project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github.com/lima8002.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github.com/lima8002/issues"
+  },
+  "homepage": "https://github.com/github.com/lima8002#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  }
+}
