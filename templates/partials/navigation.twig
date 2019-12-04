@@ -7,9 +7,9 @@
         <input type="search" name="query" placeholder="Search our catalogue" class="form-control" value="">
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
-    <div class="collapse navbar-collapse" id="#main-nav">
+    <div class="collapse navbar-collapse" id="main-nav">
         <nav class="nav navbar-nav ml-auto">
-            {% for items in navigation %}
+            {% for item in navigation %}
                 <a class="nav-link" href="{{item.link}}">{{item.name}}</a>
             {% endfor %}
         </nav
