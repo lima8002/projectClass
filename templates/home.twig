@@ -1,27 +1,24 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>{{title}}</title>
-        <meta name="viewport" content="width=device-width, initial-sacel=1">
-        <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-        <script src="node_modules/jquery/dist/jquery.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
-    </head>
+    {% include 'partials/head.twig' %}
     <body>
+        {% include 'partials/navigation.twig' %}
         <div class="container">
             <div class="row">
                 {% for item in products %}
                     <div class="col-md-3">
-                        <h3>{{item.name}}</h3>
+                        <h4 class="text-capitalize" style="min-height:4rem;">{{item.name}}</h4>
+                        <a href="detail.php?product_id={{item.product_id}}">
+                            <img class="img-fluid" src="images/products/{{item.image}}">
+                        </a>
                         <h5>{{item.price}}</h5>
-                        <p>{{item.description}}</p>
+                        <p>{{item.description | slice(0,100) ~ '...'}}</p>
 
                     </div>
                 {% endfor %}
             </div>
         </div>
+        {% include 'partials/footer.twig' %}
     </body>
 
 </html>

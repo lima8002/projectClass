@@ -2,7 +2,7 @@
 
 namespace oldspice;
 
-class Databse {
+class Database {
     private $host;
     private $user;
     private $password;

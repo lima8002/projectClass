@@ -1,8 +1,13 @@
 <?php
     require('vendor/autoload.php');
+
+    use oldspice\Navigation;
     use oldspice\Product;
 
-    $p = new Product();
+    $navigation = Navigation::getNavigation(); 
+    // call a static function from navigation class 
+
+    $p = new Product(); // declare new product
     $products = $p -> getProducts();
 
     //Twig
@@ -13,9 +18,10 @@
     // output the template
 
     echo $template -> render([
+        'navigation' => $navigation,
         'products' => $products,
         'title' => 'Home Page'
-    ])
+    ]);
 
 
 ?>
